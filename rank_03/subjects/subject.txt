@@ -1,0 +1,11 @@
+Allowed funcrtions: write, read, strlen , memmem , memmove, malloc, calloc, realloc, free, printf , fprintf, stdout, stderr. the program should take one arg str. Should read stdin and write all content read in stdout except that every occurrance of str must be replaced by * (as many as the leght of str) it hsould be tested with random buffer sizes , using a custom read funct. there fore the buffer being set in your program will be filled with a different number of chars each new call. for example: ./filter hello ; will become ni the same way as : sed's/hello/*****/g' More generally program must be equivalent of the shell script filter.sh . In case of error during a read or a malloc , you must write "error" followed by the error message in the stderr and return 1. filter.sh #!/Bin/sh [_z"$1"]&&exit1 sed -E "s/$(echo "$1" | sed 's/\([](){}\^.*+?$|]\)?\\\1/g's/$(echo "$1" | sed -E 's/./*/g')/g"
+
+infin_add (see above)
+brackets (you have argv-strings with different brackets () [] {}, if all the brackets are closed - print "OK", if not - "Error".   (hello)[11] is valid, ([)] - not valid
+rip (you have a string with parentheses (), and you need to check if all of them are balanced. if hey are not balanced, you need to remove unbalanced parenthesies with whitespace  and print all possible variation with balanced. "()())()" ---> 1. ()( )() 2. ( ())()
+html-brackets (you need to check if all html-tags in code are closed :woman-shrugging: i didn't have this one)
+n_queen (:woman-shrugging: i didn't have this one)
+permutations (you have a string with characters, and you need to print all permutations for that string (abc --> acb, cba, cab, bac etc)
+powerset (:woman-shrugging: i didn't have this one)
+
+
