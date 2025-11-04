@@ -1,5 +1,6 @@
 #include "get_next_line.h"
 
+// Shortest solution I could come up with
 static char *ft_strjoin_char(char *s, char c)
 {
     char *new;
@@ -53,6 +54,9 @@ char *get_next_line(int fd)
 #include <stdio.h>
 #include <fcntl.h>
 
+/*
+cc -Wall -Wextra -Werror get_next_line.c
+*/
 int	main(void)
 {
 	int		fd;
