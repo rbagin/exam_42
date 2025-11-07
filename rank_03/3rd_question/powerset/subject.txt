@@ -1,0 +1,47 @@
+Assignment: powerset
+expected files: *.c, *.h
+allowed functions: atoi, printf, fprintf, malloc, calloc, realloc, free, stdout,
+write
+
+Write a program that takes an integer n followed by a set s of distinct integers
+as arguments.
+
+Your program should display all the subsets of s whose sum of elements is n.
+
+The order of the lines is not important, but the order of the elements in a
+subset must match the order in the initial set s.
+
+This way, you should not have any duplicates(example '1, 2' and '2, 1' are not
+valid)
+
+For example: ./powerset 5 1 2 3 4 5
+valid output:
+1 4
+2 3
+5
+invalid output:
+3 2
+4 1
+
+More examples:
+./powerset 3 1 0 2 4 5 3
+3
+0 3
+1 2
+1 0 2
+./powerset 12 5 2 1 8 4 3 7 11
+8 4
+1 11
+1 4 7
+1 8 3
+2 3 7
+5 7
+5 4 3
+5 2 1 4
+./powerset 0 1 -1
+("\n")
+1 -1
+In case of malloc error your program should exit with the code 1.
+We will not test with invalid sets.
+HINT: The empty subset is a valid subset of any set and will be displayed as an
+empty line(see example ./powerset 0 1 -1).

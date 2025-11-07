@@ -1,0 +1,34 @@
+This is line 1
+This is line 2
+This is line 3
+This is line 4
+This is line 5
+This is line 6
+This is line 7
+This is line 8
+This is line 9
+This is line 10
+
+hello world hello
+This line has test in it and another test here
+testtest
+test at start
+at end test
+no match in this line
+aaabaaacaaa
+repeated repeated repeated
+partialtest testpartial
+test
+t
+special***characters***here
+multiple    spaces    between
+newline
+
+handling
+CAPITALS TEST capitals
+empty lines above and below
+
+consecutive testtest test testtesttest
+overlapping: aaaa with aa filter
+single character: a b a c a
+longerwordthatcontainstestinside

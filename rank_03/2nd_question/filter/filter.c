@@ -6,7 +6,7 @@
 /*   By: rbagin <rbagin@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/04 13:57:15 by rbagin        #+#    #+#                 */
-/*   Updated: 2025/11/04 19:00:32 by rbagin        ########   odam.nl         */
+/*   Updated: 2025/11/05 13:59:17 by rbagin        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ the error message in the stderr and return 1.
 	4. error managment using stderr
 */
 
+#ifndef _GNU_SOURCE
+# define _GNU_SOURCE
+#endif
 #include <string.h>
 #include <unistd.h>
 #include <stdlib.h>
