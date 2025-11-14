@@ -2,40 +2,55 @@
 */
 
 #include <stdlib.h>
+#include <stdio.h>
 
-void	process_input(int target, int *numbers, int n_numbers, int i, int j, int sum)
+void	print_subset(int *subset, int n_subset)
 {
-	int j = 1;
-	while (i < n_numbers)
+	int i = 0;
+	while (i < n_subset)
 	{
-		if (target == sum + ???)
-		{
-
-		}
-		if (target == numbers[i] + numbers[j])
-		{
-			printf("%d %d\n", numbers[i], numbers[j]);
-			return (process_input(target, numbers, n_numbers, i, j + 1, 0));
-		}
-		if (target < numbers[i] + numbers[j])
-			return ();
-		if (target > numbers[i] + numbers[j])
-		{
-			sum = numbers[i] + numbers[j]
-		}
+		if (i > 0)
+			printf(" ");
+		printf("%d", subset[i]);
+		i++;
 	}
+	printf("\n");
+}
+
+void	backtrack(int target, int *set, int n_set, int index,int result, int *subset, int n_subset)
+{
+	if (index == n_set)
+	{
+		if (result == target)
+		{
+			print_subset(subset, n_subset);
+		}
+		return ;
+	}
+	subset[n_subset] = set[index];
+	backtrack(target, set, n_set,
+				(index + 1),
+				result + set[index],
+				subset,
+				n_subset + 1);
+	backtrack(target, set, n_set,
+				index + 1,
+				result,
+				subset,
+				n_subset);
 }
 
 int main(int argc, char **argv)
 {
 	int	target = atoi(argv[1]);
 	int	numbers[argc - 2];
+	int	subset[argc - 2];
 	int i = 0;
 	while (i < argc - 2)
 	{
 		numbers[i] = atoi(argv[i + 2]);
 		i++;
 	}
-	process_input(target, numbers, argc - 2, 0, 0, 0);
+	backtrack(target, numbers, argc - 2, 0, 0, subset, 0);
 	return (0);
 }
