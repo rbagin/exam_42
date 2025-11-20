@@ -18,7 +18,6 @@ bool	isClosingBracket(int c)
 
 bool	isClosed(int closing_b, int opening_b)
 {
-	printf("c_b:%c o_b:%c\n", closing_b, opening_b);
 	if (opening_b == '(' && closing_b != ')')
 		return (false);
 	if (opening_b == '{' && closing_b != '}')
